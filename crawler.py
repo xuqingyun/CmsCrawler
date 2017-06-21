@@ -38,6 +38,13 @@ class DAO:
         self.db.commit()
         return rs
 
+colums_key = {
+    "新闻":["新闻","实事","资讯"],
+    "体育":["体育","NBA","CBA","中超","足球","篮球","乒乓球","欧冠","欧洲杯","亚冠","世界杯"],
+    "娱乐":["娱乐","八卦","明星","花边","综艺",""],
+    "":["","","","","",""],
+    "":["","","","","",""]
+}
 class Crawler:
     def __init__(self):
         self.dao=DAO()
@@ -157,7 +164,7 @@ class Crawler:
             print("已存在,跳过")
             return False
         #插入
-        self.dao.insert(self.addsql,(title, content, "|".join(keywords_list),userId, channelId, tnow))
+        # self.dao.insert(self.addsql,(title, content, "|".join(keywords_list),userId, channelId, tnow))
         return True
     def getChannelId(self,news):
         for colname in self.columns.keys():
