@@ -32,9 +32,4 @@ def getDao():
 # data = dao.selectAll(sql)
 # #for d in data:
 # #   print("data ",d[0],": ",d)
-#
-# con = dao.getConnection()
-# con.execute(sql)
-# d1=con.fetchone()
-# d2=con.fetchone()
-# print(d1,d2)
+

@@ -209,8 +209,6 @@ crawl=Crawler(url1,500)
 crawl.appendUrls(urls)
 crawl.crawl()
 
-
-
 # users=crawl.dao.selectAll("select * from t_user")
 # columns=crawl.dao.selectAll("select * from t_channel")
 # comments=crawl.dao.selectAll("select * from t_comment")
